@@ -1,0 +1,63 @@
+html {
+    touch-action: manipulation;
+}
+
+body{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform : translate(-50%,-50%);
+    background-image: url(Galaxy.jpg);
+    background-size: cover;
+}
+
+h1{
+    color: white;
+    margin-top: 0px;
+    line-height: 42px;
+}
+
+.wrapper-container {
+    border: 1px solid darkblue;
+    display: inline-block;
+    margin-top: -17px;
+}
+
+.tetris-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+    background-color: #333333;
+}
+
+.tetris-panel-container {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-direction: column;
+    color: white;
+    background-color: #333333;
+}
+
+.tetris-panel-container-padding {
+    flex-grow: 1;
+}
+
+.tetris-panel-container p {
+   margin: 0;
+   padding: 0;
+}
+
+.tetris-button-panel {
+    border-style: none;
+    margin-bottom: 10px;
+    width: 90%;
+    color: darkblue;
+}
+
+.tetris-button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: #444444;
+}

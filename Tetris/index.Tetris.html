@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>TETRiS</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.Tetris.css">
+        <script type="text/javascript" src="Tetris.js"></script>
+    </head>
+    <body><center>
+    <h1>TETRiS</h1>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <style>
+           h1{
+               font-family: "Press Start 2P";
+           }
+            
+            p{
+                font-family: "Press Start 2P";
+                font-size: 15px;
+            }
+        </style>
+    <div class="wrapper-container">
+        <span class="tetris-container">
+            <canvas id="stage" width="360px" height="660px" style="background-color:black;">
+            </canvas>
+            <span class="tetris-panel-container">
+                <p style="line-height: 35px;">NEXT</p>
+                <canvas id="next" width="200px" height="250px" style="background-color:black;">
+                </canvas>
+            <p style="line-height: 35px;">DELINES:<span id="lines" style="line-height: 10px;">0</span></p>
+            <p><span id="message"></span></p>
+            <div class="tetris-panel-container-padding"></div>
+            <table class="tetris-button-panel">
+                <tr>
+                    <td></td>
+                        <td id="tetris-rotate-button" class="tetris-button">↻</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="tetris-move-left-button"class="tetris-button">←</td>
+                    <td id="tetris-fall-button"class="tetris-button">↓</td>
+                    <td id="tetris-move-right-button"class="tetris-button">→</td>
+                </tr>
+            </table>
+            </span>
+        </span>
+    </div></center>
+    <script>
+        var tetris = new Tetris();
+        tetris.startGame();
+    </script>
+    </body>
+</html>

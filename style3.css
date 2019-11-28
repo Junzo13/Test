@@ -1,0 +1,111 @@
+header {
+    width: 100%;
+    height: 60px;
+    background-color: black;
+}
+
+header ul {
+    float: left;
+    line-height: 30px;
+}
+
+header ul li {
+    float: left;
+    list-style: none;
+    padding-right: 120px;
+    color: white;
+    margin-left: 12px;
+    font-size: 18px;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: aqua;
+}
+
+main {
+    clear: both;
+}
+
+.main-container {
+    width: 95%;
+    margin-left: 5px;
+    margin-bottom: 25px;
+}
+
+.left {
+    float: left;
+    width: 70%;
+}
+
+h2 {
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    margin-top: 2px;
+    width: 93%;
+    height: 40px;
+}
+
+#text {
+    clear: left;
+    margin-top: -12px;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.slider img {
+    width: 120%;
+    height: 80%;
+}
+
+p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.box2 {
+    width: 93%;
+    padding-top: 30px;
+    height: 336px;
+    margin-bottom: 30px;
+    background-color: lightgray;
+    text-align: center;
+}
+
+.box2 .box_pic2 {
+    display: inline-block;
+}
+
+.right {
+    float: right;
+    width: 30%
+}
+
+h4 {
+    border-bottom: 1px dotted black;
+    width: 115;
+}
+
+.list ul {
+    margin-top: -20px;
+}
+
+.list ul li {
+    list-style: none;
+    padding: 5px;
+    margin-left: -40px;
+}
+
+footer {
+    clear: both;
+    width: 100%;
+    height: 60px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    line-height: 60px;
+}
