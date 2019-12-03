@@ -13,14 +13,15 @@ body{
 
 h1{
     color: white;
-    margin-top: 0px;
-    line-height: 42px;
+    margin-top: -10px;
+    line-height: 25px;
+    font-size: 30px;
 }
 
 .wrapper-container {
     border: 1px solid darkblue;
     display: inline-block;
-    margin-top: -17px;
+    margin-top: -10px;
 }
 
 .tetris-container {

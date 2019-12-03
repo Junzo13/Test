@@ -1,0 +1,85 @@
+package com.internousdev.ecsite.action;import org.apache.struts.
+
+import javax.servlet.http.*;
+import java.util.*;
+import javax.mail.*;
+import javax.mail.internet.*;
+
+public class MailAction extends Action {
+	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) {
+		try {
+			MailForm f = (MailForm) form;
+			Properties props = new Properties();
+			props.put("mail.smtp.host", "localhost");
+			javax.mail.Session msession = javax.mail.Session.getDefaultInstance(props, null);
+			MimeMessage msg = new MimeMessage(msession);
+			msg.setFrom(new InternetAddress("test@test.co.jp", "テストユーザ", "iso-2022-jp"));
+			msg.setRecipients(Message.RecipientType.TO, f.getTo());
+			msg.setSubject("テスト件名", "iso-2022-jp");
+			msg.setText("本文", "iso-2022-jp");
+			msg.setHeader("Content-Type", "text/plain");
+			msg.setSentDate(new java.util.Date());
+			Transport.send(msg);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		// 結果のページを返す
+		return mapping.findForward("success");
+	}
+}-----------------------
+
+デバッグプリントを入れてみると、
+
+MimeMessage msg = new MimeMessage(msession);ここでエラーが発生しているようです。
+
+実装方法は、struts-blank.warを解凍して、メール送信用ページmail.jsp
+
+-----------------------<%
+@ page contentType="text/html; charset=Shift_JIS" %>
+<%@ taglib uri="/tags/struts-html" prefix="html" %>
+<HTML><body>
+<html:form action="/Mail">
+<html:
+text name="MailForm"property="to"/><html:
+submit value="送信" />
+</html:form>
+</body></HTML>
+-----------------------
+
+と、結果表示のsuccess.jsp
+
+-----------------------
+<%
+@ page contentType="text/html; charset=Shift_JIS" %>
+<HTML><body>
+mail success!!<BR/>メール送信成功!!</body></HTML>-----------------------
+
+を追加し、上記のActionと、フォームのMailForm.java
+
+-----------------------package test;import org.apache.struts.action.ActionForm;
+
+public class MailForm extends ActionForm {
+	private String to;
+
+	public void setTo(String val) {
+		to = val;
+	}
+
+	public String getTo() {
+		return to;
+	}}-----------------------
+
+	を追加し、struts-config.xmlのform-beansとaction-mappingsに
+
+	-----------------------<form-
+
+	bean name="MailForm"type="test.MailForm"/>-----------------------
+
+	-----------------------<
+	action path="/Mail"type="test.MailAction"name="MailForm"scope="request"validate="false"><
+	forward name="success"path="/pages/success.jsp"/></action>
+
+public class MailAction {
+
+}

@@ -15,7 +15,7 @@
 			<p>MyPage</p>
 		</div>
 		<div>
-			<s:if test="myPageList==null">
+			<s:if test="myPageList==null or myPageList.size() == 0">
 				<h3>ご購入情報はありません。</h3>
 			</s:if>
 			<s:elseif test="message==null">

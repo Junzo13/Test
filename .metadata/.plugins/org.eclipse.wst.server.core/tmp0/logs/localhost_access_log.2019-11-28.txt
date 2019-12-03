@@ -92,3 +92,5 @@
 0:0:0:0:0:0:0:1 - - [28/Nov/2019:20:53:04 +0900] "GET /ecsite/UserCreateAction.action HTTP/1.1" 200 -
 0:0:0:0:0:0:0:1 - - [28/Nov/2019:20:53:04 +0900] "GET /ecsite/UserCreateAction.action HTTP/1.1" 200 1995
 0:0:0:0:0:0:0:1 - - [28/Nov/2019:20:53:06 +0900] "POST /ecsite/UserCreateConfirmAction.action HTTP/1.1" 200 2070
+127.0.0.1 - - [28/Nov/2019:21:36:23 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [28/Nov/2019:21:36:30 +0900] "GET /ecsite/ HTTP/1.1" 200 1068

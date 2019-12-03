@@ -15,7 +15,7 @@
 			<p>ItemList</p>
 		</div>
 		<div>
-			<s:if test="itemList==null">
+			<s:if test="itemList==null or itemList.size() == 0">
 				<h3>登録商品はありません。</h3>
 			</s:if>
 			<s:elseif test="message==null">

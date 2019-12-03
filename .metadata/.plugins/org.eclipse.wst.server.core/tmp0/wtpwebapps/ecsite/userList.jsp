@@ -15,7 +15,7 @@
 			<p>UserList</p>
 		</div>
 		<div>
-			<s:if test="userList==null">
+			<s:if test="userList==null or userList.size() == 0">
 				<h3>ユーザー情報はありません。</h3>
 			</s:if>
 			<s:elseif test="message==null">
