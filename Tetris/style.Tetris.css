@@ -13,7 +13,7 @@ body{
 
 h1{
     color: white;
-    margin-top: -10px;
+    margin-top: -12px;
     line-height: 25px;
     font-size: 30px;
 }
@@ -21,7 +21,7 @@ h1{
 .wrapper-container {
     border: 1px solid darkblue;
     display: inline-block;
-    margin-top: -10px;
+    margin-top: -11px;
 }
 
 .tetris-container {
